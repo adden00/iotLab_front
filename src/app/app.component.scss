@@ -1,135 +1,142 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto, sans-serif;
+}
+
 .header {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  background-color: #acdcff;
-  padding: 0px 10px 0px 10px;
-  font-size: 18px;
-  padding: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #acdcff;
+    padding: 0px 10px 0px 10px;
+    font-size: 18px;
+    padding: 5px;
 }
 
 .header-logo {
-  flex: 1;
+    flex: 1;
 }
 
 .header-left {
-  flex: 40;
-  font-weight: bold;
+    font-weight: bold;
+    flex: 40;
 }
 
 .headerLogo {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 }
 
 .header a {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 a:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .header-right a:hover {
-  background-color: #94d3ff;
+    background-color: #94d3ff;
 }
 
 .header-user-img {
-  width: 60px;
-  height: 40px;
+    width: 60px;
+    height: 40px;
 }
 
 .header-right {
-  flex: 10;
+    flex: 10;
 }
 
 .header-left a {
-  padding: 20px 10px 20px 10px;
-  line-height: 40px;
+    padding: 20px 10px 20px 10px;
+    line-height: 40px;
 }
 
 .header-right a {
-  padding: 20px 10px 20px 10px;
-  line-height: 40px;
-  text-align: center;
+    padding: 20px 10px 20px 10px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .main-menu {
-  display: flex;
-  background-color: #dbedfa;
+    display: flex;
+    background-color: #dbedfa;
 }
 
 .main-menu img {
-  margin: 2px 5px 2px 5px;
-  width: 20px;
-  height: 20px;
+    margin: 2px 5px 2px 5px;
+    width: 20px;
+    height: 20px;
 }
 
 .main-menu button {
-  margin: 0px 5px 0px 5px;
-  padding: 5px;
-  background-color: inherit;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+    background-color: inherit;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
 }
 
 .main-menu button:hover {
-  background-color: #a7d7fa;
+    background-color: #a7d7fa;
+    transition: 0.3s;
 }
 
 .control-menu {
-  margin: 5px 10px 5px 10px;
-  margin: 5px;
-  display: flex;
-  flex: 2;
+    border-right: 2px solid #005592;
+    display: flex;
+    justify-content: center;
+    flex: 1;
 }
 
 .flow-menu {
-  margin: 5px 10px 5px 10px;
-  justify-content: flex-start;
-  display: flex;
-  flex: 1;
+    border-right: 2px solid #005592;
+    display: flex;
+    justify-content: center;
+    flex: 1;
 }
 
 .center-menu {
-  margin: 5px;
-  border-left: 2px solid #005592;
-  border-right: 2px solid #005592;
-  flex: 15;
+    margin: 5px;
+    border-right: 2px solid #005592;
+    flex: 15;
 }
 
 .right-menu {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex: 5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 5;
 }
 
 .right-menu button {
-  background-color: #7cbdec;
-  padding: 10px 25px 10px 25px;
-  font-size: 16px;
-  margin: 0px 20px 0px 20px;
+    background-color: #7cbdec;
+    padding: 10px 25px 10px 25px;
+    font-size: 16px;
+    margin: 0px 20px 0px 20px;
 }
 
 .mainField {
-  overflow: hidden;
-  display: flex;
-  height: 100%;
+    overflow: hidden;
+    display: flex;
+    height: 100%;
 }
 
 .elementsField {
-  background-color: aqua;
-  flex: 4;
+    background-color: aqua;
+    flex: 4;
 }
 
 .elementsLibrary {
-  background-color: #ffffff;
-  flex: 1;
+    background-color: rgb(5, 255, 109);
+    flex: 1;
 }
 
 .mainField p {
-  margin: 1000px 100px 1000px 100px;
+    margin: 1000px 100px 1000px 100px;
 }
