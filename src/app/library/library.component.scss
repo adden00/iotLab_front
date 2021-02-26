@@ -1,0 +1,59 @@
+.library_frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  fill: #fff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16.8873px;
+  line-height: 20px;
+
+
+}
+
+h1 {
+  font-size: 25px;
+}
+
+.label_select_component {
+  position: absolute;
+  max-width: 100%;
+  height: 49px;
+  left: 15px;
+  top: 10px;
+  margin: 5px auto;
+  text-align: center;
+
+
+}
+
+.close_btn {
+  position: absolute;
+  width: 85.14px;
+  height: 21.11px;
+  left: 174px;
+  top: 70px;
+
+}
+
+
+.input_search_element {
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  top: 70px;
+  left: 15px;
+
+}
+
+.from_input {
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  top: 80px;
+  left: 15px;
+
+}
