@@ -56,6 +56,7 @@ a:hover {
 }
 
 .header-right a {
+    border-radius: 10px;
     padding: 20px 10px 20px 10px;
     line-height: 40px;
     text-align: center;
@@ -112,13 +113,6 @@ a:hover {
     align-items: center;
     justify-content: flex-end;
     flex: 5;
-}
-
-.right-menu button {
-    background-color: #7cbdec;
-    padding: 10px 25px 10px 25px;
-    font-size: 16px;
-    margin: 0px 20px 0px 20px;
 }
 
 .mainField {
