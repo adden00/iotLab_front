@@ -1,0 +1,29 @@
+.terminal_button {
+    display: flex;
+    padding: 5px 15px 5px 15px;
+    margin: 5px 20px 5px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #7cbdec;
+}
+
+.terminal_button:hover {
+    background-color: #a7d7fa;
+    transition: 0.3s;
+}
+
+.terminal_button img {
+    margin: 2px 20px 2px 0px;
+    width: 20px;
+    height: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.terminal_button span {
+    margin: 2px 0px 2px 5px;
+    line-height: 20px;
+    font-size: 16px;
+    justify-content: flex-end;
+    align-items: center;
+}
