@@ -1,13 +1,34 @@
 <div class="library_frame">
+  <div class="wrapper">
 
-  <h1 class="label_select_component">
-    Выберите компонент
-  </h1>
 
-  <button class="close_btn" >найти</button>
+    <h1 class="label_select_component">
+      Выберите компонент
+    </h1>
 
-  <div class="input_search_element">
-    <input type="text" [(ngModel)] = "searchText">
+
+
+    <div class="input_search_element">
+      <input type="text" [(ngModel)] = "searchText">
+      <div class="close_btn">
+        <button>найти</button>
+      </div>
+    </div>
+
+    <p class="label_from_input">
+      <b>Вы ввели:</b> {{searchText}}
+    </p>
+
+    <ul class="list_components">
+
+      <li class="component" >
+        <img class="esp" src="assets/images/components_library/esp8266.png" alt="esp">
+      </li>
+      <li class="component"></li>
+      <li class="component"></li>
+
+    </ul>
+
   </div>
-  <p class="from_input">Вы ввели: {{searchText}}</p>
+
 </div>
