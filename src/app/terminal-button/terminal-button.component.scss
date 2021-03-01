@@ -7,11 +7,19 @@
     background-color: #7cbdec;
 }
 
+.terminal_button:active {
+    transform: scale(0.95);
+    transition: 0.05s;
+}
+
 .terminal_button:hover {
     background-color: #a7d7fa;
     transition: 0.3s;
 }
 
+.terminal_button:focus {
+  outline: none;
+}
 .terminal_button img {
     margin: 2px 20px 2px 0px;
     width: 20px;

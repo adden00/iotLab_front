@@ -4,6 +4,12 @@ body {
     font-family: Roboto, sans-serif;
 }
 
+button:focus{
+    outline: none !important;
+}
+button:active{
+    transform: scale(0.8);
+}
 .header {
     display: flex;
     align-items: center;
@@ -64,6 +70,8 @@ a:hover {
 }
 
 .main-menu {
+    border-top: 0.5px solid #bcd2e2;
+    border-bottom: 0.5px solid #bcd2e2;
     display: flex;
     background-color: #dbedfa;
 }
@@ -89,22 +97,21 @@ a:hover {
 }
 
 .control-menu {
-    border-right: 2px solid #005592;
+    border-right: 0.5px solid #002641;
     display: flex;
     justify-content: center;
     flex: 1;
 }
 
 .flow-menu {
-    border-right: 2px solid #005592;
+    border-right: 0.5px solid #002641;
     display: flex;
     justify-content: center;
     flex: 1;
 }
 
 .center-menu {
-    margin: 5px;
-    border-right: 2px solid #005592;
+    border-right: 0.5px solid #002641;
     flex: 15;
 }
 
@@ -122,15 +129,15 @@ a:hover {
 }
 
 .elementsField {
-    background-color: aqua;
+    background-color: rgb(245, 245, 245);
     flex: 4;
 }
 
 .elementsLibrary {
-    background-color: rgb(5, 255, 109);
+    background-color: #dbf0ff;
     flex: 1;
 }
 
 .mainField p {
-    margin: 1000px 100px 1000px 100px;
+    margin: 50% 100px 50% 100px;
 }
