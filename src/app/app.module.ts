@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LibraryComponent } from './library/library.component';
 import { FormsModule } from '@angular/forms';
 import { TerminalButtonComponent } from './terminal-button/terminal-button.component';
-import {DragDropModule} from '@angular/cdk/drag-drop';
+// import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    DragDropModule
+    // DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
