@@ -1,34 +1,60 @@
 <div class="library_frame">
-  <div class="wrapper">
 
 
-    <h1 class="label_select_component">
-      Выберите компонент
-    </h1>
+    <div class="header">
+      <h1 class="label_select_component">
+        Выберите компонент
+      </h1>
 
 
 
-    <div class="input_search_element">
-      <input type="text" [(ngModel)] = "searchText">
-      <div class="close_btn">
-        <button>найти</button>
+      <div class="input_search_element">
+        <input type="text" [(ngModel)] = "searchText">
+        <div class="close_btn">
+          <button>найти</button>
+        </div>
       </div>
+
+      <p class="label_from_input">
+        <b>Вы ввели:</b> {{searchText}}
+      </p>
+
     </div>
 
-    <p class="label_from_input">
-      <b>Вы ввели:</b> {{searchText}}
-    </p>
+    <div class="wrapper">
+    <div class="elements">
+      <ul class="list_components">
 
-    <ul class="list_components">
+        <li class="component" DRAGGABLE="true">
+          <img class="big_component" src="assets/images/components_library/esp8266.png" alt="esp" >
+        </li>
+        <li class="component">
+          <img class="big_component" src="assets/images/components_library/battery_9V.png" alt="battery">
+        </li>
+        <li class="component">
+          <img src="assets/images/components_library/layout_board.png" alt="board" class="big_component">
+        </li>
+        <li class="component">
+          <img src="assets/images/components_library/button.png" alt="button" class="small_component">
+        </li>
+        <li class="component">
+          <img src="assets/images/components_library/condey.png" alt="condey" class="small_component">
+        </li>
+        <li class="component">
+          <img src="assets/images/components_library/diode.png" alt="diode" class="small_component">
+        </li>
+        <li class="component">
+          <img src="assets/images/components_library/polzunok.png" alt="polzunok" class="small_component">
+        </li>
+        <li class="component">
+          <img class="small_component" src="assets/images/components_library/led.png" alt="led">
+        </li>
+        <li class="component">
+          <img src="assets/images/components_library/resistor.png" alt="resistor" class="small_component">
+        </li>
 
-      <li class="component" >
-        <img class="esp" src="assets/images/components_library/esp8266.png" alt="esp">
-      </li>
-      <li class="component"></li>
-      <li class="component"></li>
-
-    </ul>
-
+      </ul>
+    </div>
   </div>
 
 </div>

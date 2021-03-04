@@ -2,8 +2,8 @@
 
 .library_frame {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 330px;
+  height: 1000px;
   overflow-y: scroll;
   fill: #fff;
   border: 1px solid #000000;
@@ -16,7 +16,12 @@
 
 
 .wrapper {
-  width: 95%;
+  margin: 10px 10px;
+}
+
+.header {
+  position: fixed;
+  background: rgb(5, 255, 109);
 }
 
 h1 {
@@ -51,22 +56,46 @@ h1 {
 .label_from_input {
   width: 200px;
   height: 25px;
+  margin-left: 10px;
 }
 
 //Стили для списка компонентов
 
+.elements {
+  padding-top: 150px;
+}
+
 .list_components {
   list-style-type: none;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 5px;
+  padding: 0;
+
 }
 
 .component {
-   margin: 0 10px;
+  margin: 0 10px;
+  width: auto;
+  height: auto;
 
 }
 
-.esp {
-  width: calc(50% - 10px);
+.component:hover {
+  border: 1px solid red;
+
+}
+
+.big_component {
+  width: 250px;
+
+}
+
+
+.small_component {
+  width: 100px;
+  margin: auto 0;
 
 }
 

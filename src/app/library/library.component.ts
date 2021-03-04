@@ -8,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class LibraryComponent implements OnInit {
   constructor() { }
   searchText = 'search';
+  // curComp = '';
   ngOnInit(): void {
   }
+  // onClick(comp: string): string {
+  //   this.curComp = comp;
+  //   return comp;
+  // }
+
 }
