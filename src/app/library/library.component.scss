@@ -1,4 +1,4 @@
-//общие стили
+    //общие стили
 .library_frame {
     display: flex;
     align-items: center;
@@ -41,4 +41,40 @@
 
 .esp {
     width: calc(50% - 10px);
-}
+    .close_btn {
+        width: 100px;
+        height: 21.11px;
+        padding-top: 3px;
+    }
+    .label_from_input {
+        width: 200px;
+        height: 25px;
+        margin-left: 10px;
+    }
+    //Стили для списка компонентов
+    .elements {
+        padding-top: 150px;
+    }
+    .list_components {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 5px;
+        padding: 0;
+    }
+    .component {
+        margin: 0 10px;
+        width: auto;
+        height: auto;
+    }
+    .component:hover {
+        border: 1px solid red;
+    }
+    .big_component {
+        width: 250px;
+    }
+    .small_component {
+        width: 100px;
+        margin: auto 0;
+    }

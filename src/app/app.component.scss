@@ -1,15 +1,22 @@
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+}
+
 body {
     margin: 0px;
     padding: 0px;
     font-family: Roboto, sans-serif;
 }
 
-button:focus{
+button:focus {
     outline: none !important;
 }
-button:active{
+
+button:active {
     transform: scale(0.8);
 }
+
 .header {
     display: flex;
     align-items: center;
@@ -133,28 +140,29 @@ a:hover {
     flex: 4;
 }
 
-
 .firstRow {
     margin: 20px 25px;
     width: 70px;
     height: 100px;
 }
+
 .secondRow {
     margin: 20px 35px;
     width: 50px;
     height: 90px;
 }
+
 .thirdRow {
     margin: 20px 10px;
     width: 100px;
     height: 80px;
 }
 
-.writings{
+.writings {
     margin-left: 20px;
 }
 
-.fourthRow{
+.fourthRow {
     margin: 20px 90px;
     width: 76px;
     height: 72px;
