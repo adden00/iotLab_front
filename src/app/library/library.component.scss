@@ -1,14 +1,17 @@
-    //общие стили
+//общие стили
 .library_frame {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    position: relative;
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
     border-left: 0.5px solid #bcd2e2;
     padding: 5px;
+}
+
+.choose-component {
+    margin: 10px 0px 10px 0px;
 }
 
 //стили шапки и поиска
@@ -19,62 +22,28 @@
 }
 
 .input_search_element {
-    width: 50px;
-    height: 25px;
-}
-
-.from_input {
-    width: 200px;
-    height: 25px;
+    display: flex;
 }
 
 //Стили для списка компонентов
 .list_components {
+    overflow: auto;
+    max-height: 450px;
     list-style-type: none;
     margin: 0 auto;
 }
 
 .component {
-    margin: 0 10px;
-    width: calc(50% - 10px);
+    background-color: #a2d8ff;
+    border-radius: 5px;
+    border: 1px solid #9cc3df;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+    padding: 10px;
 }
 
-.esp {
-    width: calc(50% - 10px);
-    .close_btn {
-        width: 100px;
-        height: 21.11px;
-        padding-top: 3px;
-    }
-    .label_from_input {
-        width: 200px;
-        height: 25px;
-        margin-left: 10px;
-    }
-    //Стили для списка компонентов
-    .elements {
-        padding-top: 150px;
-    }
-    .list_components {
-        list-style-type: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 0 5px;
-        padding: 0;
-    }
-    .component {
-        margin: 0 10px;
-        width: auto;
-        height: auto;
-    }
-    .component:hover {
-        border: 1px solid red;
-    }
-    .big_component {
-        width: 250px;
-    }
-    .small_component {
-        width: 100px;
-        margin: auto 0;
-    }
+.component img {
+    width: 100px;
+    height: 50px;
+}
