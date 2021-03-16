@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { LibraryComponent } from './library/library.component';
 import { FormsModule } from '@angular/forms';
 import { TerminalButtonComponent } from './terminal-button/terminal-button.component';
+import { MainFieldComponent } from './main-field/main-field.component';
 // import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
     AppComponent,
     LibraryComponent,
-    TerminalButtonComponent
+    TerminalButtonComponent,
+    MainFieldComponent
   ],
   imports: [
     BrowserModule,
