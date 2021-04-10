@@ -7,6 +7,8 @@ import { LibraryComponent } from './library/library.component';
 import { FormsModule } from '@angular/forms';
 import { TerminalButtonComponent } from './terminal-button/terminal-button.component';
 import { MainFieldComponent } from './main-field/main-field.component';
+import { PopUpMenuComponent } from './pop-up-menu/pop-up-menu.component';
+import { ElectronicComponentComponent } from './electronic-component/electronic-component.component';
 // import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
@@ -14,7 +16,10 @@ import { MainFieldComponent } from './main-field/main-field.component';
     AppComponent,
     LibraryComponent,
     TerminalButtonComponent,
-    MainFieldComponent
+    MainFieldComponent,
+    TerminalButtonComponent,
+    PopUpMenuComponent,
+    ElectronicComponentComponent
   ],
   imports: [
     BrowserModule,

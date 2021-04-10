@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LibraryComponent } from './library.component';
+import { PopUpMenuComponent } from './pop-up-menu.component';
 
-describe('LibraryComponent', () => {
-  let component: LibraryComponent;
-  let fixture: ComponentFixture<LibraryComponent>;
+describe('PopUpMenuComponent', () => {
+  let component: PopUpMenuComponent;
+  let fixture: ComponentFixture<PopUpMenuComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LibraryComponent]
+      declarations: [ PopUpMenuComponent ]
     })
-      .compileComponents();
+    .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LibraryComponent);
+    fixture = TestBed.createComponent(PopUpMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

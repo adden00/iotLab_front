@@ -1,13 +1,20 @@
 .wrapper {
-  height: 100vh;
-  width: 100vw;
+    height: 100vh;
+    width: 100vw;
 }
-
 
 body {
     margin: 0px;
     padding: 0px;
     font-family: Roboto, sans-serif;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+button:active {
+    transform: scale(0.8);
 }
 
 .header {
@@ -70,6 +77,8 @@ a:hover {
 }
 
 .main-menu {
+    border-top: 0.5px solid #bcd2e2;
+    border-bottom: 0.5px solid #bcd2e2;
     display: flex;
     background-color: #dbedfa;
 }
@@ -95,22 +104,21 @@ a:hover {
 }
 
 .control-menu {
-    border-right: 2px solid #005592;
+    border-right: 0.5px solid #002641;
     display: flex;
     justify-content: center;
     flex: 1;
 }
 
 .flow-menu {
-    border-right: 2px solid #005592;
+    border-right: 0.5px solid #002641;
     display: flex;
     justify-content: center;
     flex: 1;
 }
 
 .center-menu {
-    margin: 5px;
-    border-right: 2px solid #005592;
+    border-right: 0.5px solid #002641;
     flex: 15;
 }
 
@@ -128,42 +136,43 @@ a:hover {
 }
 
 .elementsField {
-    background-color: aqua;
+    background-color: rgb(245, 245, 245);
     flex: 4;
 }
-
 
 .firstRow {
     margin: 20px 25px;
     width: 70px;
     height: 100px;
 }
+
 .secondRow {
     margin: 20px 15px;
     width: 90px;
     height: 60px;
 }
+
 .thirdRow {
     margin: 20px 10px;
     width: 100px;
     height: 80px;
 }
 
-.writings{
+.writings {
     margin-left: 20px;
 }
 
-.fourthRow{
+.fourthRow {
     margin: 20px 90px;
     width: 76px;
     height: 72px;
 }
 
 .elementsLibrary {
-    background-color: #dff9fa;
+    background-color: #dbf0ff;
     flex: 1;
 }
 
 .mainField p {
-    //margin: 1000px 100px 1000px 100px;
+    margin: 50% 100px 50% 100px;
 }
