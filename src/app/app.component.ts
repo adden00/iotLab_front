@@ -87,7 +87,7 @@ export class AppComponent {
     function dropESP(): void {
       try {
         graph.getModel().beginUpdate();
-        const v1 = graph.insertVertex(parent, null, 'ESP8826', Math.random()*500, Math.random()*300, 200, 100,
+        const v1 = graph.insertVertex(parent, null, 'ESP8862', Math.random()*500, Math.random()*300, 200, 100,
           'verticalLabelPosition=top;verticalAlign=bottom;shadow=1;fillColor=' + fillColor);
         v1.setConnectable(false);
 
