@@ -19,7 +19,7 @@
 <div class="main-menu">
     <div class="control-menu">
         <div class="menu-bin">
-            <button><img class="header-user-img" src="assets\images\mainpage\delete.png" alt="Delete" /></button>
+            <button id="rmBtn"><img class="header-user-img" src="assets\images\mainpage\delete.png" alt="Delete" /></button>
         </div>
         <div class="menu-rotate">
             <button><img class="header-user-img" src="assets\images\mainpage\rotate.png" alt="Rotate" /></button>
@@ -28,10 +28,10 @@
 
     <div class="flow-menu">
         <div class="menu-left">
-            <button><img class="header-user-img" src="assets\images\mainpage\leftarrow.png" alt="Delete" /></button>
+            <button id="undoBtn"><img class="header-user-img" src="assets\images\mainpage\leftarrow.png" alt="undo" /></button>
         </div>
         <div class="menu-right">
-            <button><img class="header-user-img" src="assets\images\mainpage\rightarrow.png" alt="Rotate" /></button>
+            <button id="redoBtn"><img class="header-user-img" src="assets\images\mainpage\rightarrow.png" alt="redo" /></button>
         </div>
     </div>
     <div class="center-menu">
@@ -44,29 +44,56 @@
 
 <div class="mainField">
     <div class="elementsField">
-      <app-main-field></app-main-field>
+      <div #graphContainer id="graphContainer" class="graph">
+      </div>
     </div>
     <div class="elementsLibrary">
         <app-library></app-library>
-<!-- <a><img class="firstRow" src="assets/images/components_library/led.png" alt="Rotate" /></a>
-               <a><img class="firstRow" src="assets/images/components_library/condey.png" alt="Rotate" /></a>
-                 <div class="writings">
-                 <a>Светодиод &#160; &#160; &#160; &#160; Конденсатор</a>
-                </div>
-               <a><img class="secondRow" src="assets/images/components_library/resistor.png" alt="Rotate" /></a>
-               <a><img class="secondRow" src="assets/images/components_library/diode.png" alt="Rotate" /></a>
-               <div class="writings">
-               <a>&#160; Резистор &#160; &#160; &#160; &#160; &#160; &#160;  &#160; Диод</a>
-               </div>
-               <a><img class="thirdRow" src="assets/images/components_library/wire.png" alt="Rotate" /></a>
-               <a><img class="thirdRow" src="assets/images/components_library/polzunok.png" alt="Rotate" /></a>
-               <div class="writings">
-               <a> &#160;  Провод &#160; &#160; &#160; &#160; &#160; &#160;  Ползунок</a>
-               </div>
-               <a><img class="fourthRow" src="assets/images/components_library/button.png" alt="Rotate" /></a>
-               <div class="writings">
-               <a> &#160;  &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; Кнопка</a>
-                </div>
--->
+      <div class="wrapper">
+        <div class="library_frame">
+
+
+
+            <h1 class="label_select_component">
+              Выберите компонент
+            </h1>
+
+
+
+
+
+            <div class="list_components">
+
+              <li class="component">
+                <img id="esp_im" class="esp" src="assets/images/components_library/esp8266.png" alt="esp">
+                <p>ESP-8266</p>
+              </li>
+              <li class="component">
+                <img id="led_im" class="thin" src="assets/images/components_library/led.png" alt="led">
+                <p>Светодиод</p>
+              </li>
+              <li class="component">
+                <img src="assets/images/components_library/resistor.png" alt="resistor">
+                <p>Емкость</p>
+              </li>
+              <li class="component">
+                <img src="assets/images/components_library/battery_9V.png" alt="battery">
+                <p>Батарейка 9В</p>
+              </li>
+<!--              <li class="component">-->
+<!--                <img src="assets/images/components_library/layout_board.png" alt="board">-->
+<!--                <p>Макетная плата</p>-->
+<!--              </li>-->
+              <li class="component">
+                <img class="thin" src="assets/images/components_library/button.png" alt="button">
+                <p>Кнопка</p>
+              </li>
+              <li class="component">
+                <img src="assets/images/components_library/polzunok.png" alt="polzunok">
+                <p>Ползунок</p>
+              </li>
+          </div>
+        </div>
+      </div>
     </div>
 </div>

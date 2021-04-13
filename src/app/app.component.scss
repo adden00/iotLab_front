@@ -1,7 +1,4 @@
-.wrapper {
-    height: 100vh;
-    width: 100vw;
-}
+
 
 body {
     margin: 0px;
@@ -138,34 +135,7 @@ a:hover {
 .elementsField {
     background-color: rgb(245, 245, 245);
     flex: 4;
-}
 
-.firstRow {
-    margin: 20px 25px;
-    width: 70px;
-    height: 100px;
-}
-
-.secondRow {
-    margin: 20px 15px;
-    width: 90px;
-    height: 60px;
-}
-
-.thirdRow {
-    margin: 20px 10px;
-    width: 100px;
-    height: 80px;
-}
-
-.writings {
-    margin-left: 20px;
-}
-
-.fourthRow {
-    margin: 20px 90px;
-    width: 76px;
-    height: 72px;
 }
 
 .elementsLibrary {
@@ -175,4 +145,70 @@ a:hover {
 
 .mainField p {
     //margin: 50% 100px 50% 100px;
+}
+
+
+
+// стили списка компонеентов
+
+//общие стили
+.library_frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-left: 0.5px solid #bcd2e2;
+  padding: 5px;
+}
+
+.choose-component {
+  margin: 10px 0px 10px 0px;
+}
+
+//стили шапки и поиска
+.label_select_component {
+  //max-width: 100%;
+  margin: 5px auto;
+  text-align: center;
+}
+
+
+//Стили для списка компонентов
+.list_components {
+  overflow: auto;
+  max-height: 80vh;
+  list-style-type: none;
+  margin: 0 auto;
+}
+
+.component {
+  background-color: #a2d8ff;
+  border-radius: 5px;
+  border: 1px solid #9cc3df;
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px;
+  padding: 10px;
+}
+
+.component img {
+  width: 100px;
+  height: 50px;
+}
+
+.thin {
+  max-width: 50px;
+}
+
+// главное поле
+
+.graph  {
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  height:100%;
+  background:url('../assets/images/grid.gif');
+  cursor:default;
 }
