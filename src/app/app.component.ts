@@ -18,6 +18,8 @@ declare var mxGuide: any;
 // declare var mxEdgeHandler: any;
 declare var mxRectangle: any;
 declare var mxUndoManager: any;
+const ledIsOn = false;
+
 
 
 @Component({
@@ -25,6 +27,8 @@ declare var mxUndoManager: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
+
 export class AppComponent {
   title = 'iotLab';
   constructor() { }
@@ -45,7 +49,6 @@ export class AppComponent {
     const fillColor = '#FFFFFF';
     const fontColor = '#000000';
     const strokeColor = '#000000';
-
     // создаем граф
     const graph = new mxGraph(this.graphContainer.nativeElement);
     graph.setConnectable(true);
@@ -87,7 +90,7 @@ export class AppComponent {
     function dropESP(): void {
       try {
         graph.getModel().beginUpdate();
-        const v1 = graph.insertVertex(parent, null, 'ESP8862', Math.random()*500, Math.random()*300, 200, 100,
+        const v1 = graph.insertVertex(parent, null, 'ESP8266', Math.random()*500, Math.random()*300, 200, 100,
           'verticalLabelPosition=top;verticalAlign=bottom;shadow=1;fillColor=' + fillColor);
         v1.setConnectable(false);
 
@@ -156,20 +159,23 @@ export class AppComponent {
     function dropLED(): void {
       try {
         graph.getModel().beginUpdate();
-        const v1 = graph.insertVertex(parent, null, 'LED', Math.random()*500, Math.random()*300, 50, 50,
+        const v1 = graph.insertVertex(parent, null, 'LED', Math.random()*500, Math.random()*300, 35, 35,
           'shape=ellipse;verticalLabelPosition=top;verticalAlign=bottom;shadow=1;fillColor=' + fillColor);
         v1.setConnectable(false);
+        if (ledIsOn) {
+          v1.style = 'shape=ellipse;verticalLabelPosition=top;verticalAlign=bottom;shadow=1;fillColor=red';
+        }
 
         const v11 = graph.insertVertex(v1, null, '', 0, 0, 10, 16,
           'shape=line;align=left;verticalAlign=middle;fontSize=10;routingCenterX=-0.5;' +
           'spacingLeft=12;fontColor=' + fontColor + ';strokeColor=' + strokeColor);
         v11.geometry.relative = true;
-        v11.geometry.offset = new mxPoint(-v11.geometry.width, v11.geometry.height);
+        v11.geometry.offset = new mxPoint(-v11.geometry.width, 10);
         const v12 = v11.clone();
         v12.style = 'shape=line;align=right;verticalAlign=middle;fontSize=10;routingCenterX=0.5;' +
           'spacingRight=12;fontColor=' + fontColor + ';strokeColor=' + strokeColor;
         v12.value = '';
-        v12.geometry.offset = new mxPoint(5 * v11.geometry.width, v11.geometry.height);
+        v12.geometry.offset = new mxPoint(35, 10);
         v1.insert(v12);
 
 
@@ -180,6 +186,75 @@ export class AppComponent {
     }
 
     mxUtils.makeDraggable(imgLED, graph, dropLED, dragElt, 0, 0, true, true);
+
+
+    // добавление резистора на поле
+    const imgRes = document.getElementById('res_im');
+    function dropResistor(): void {
+      try {
+        graph.getModel().beginUpdate();
+        const v1 = graph.insertVertex(parent, null, 'R', Math.random()*500, Math.random()*300, 60, 15,
+          'verticalLabelPosition=top;verticalAlign=bottom;shadow=1;fillColor=' + fillColor);
+        v1.setConnectable(false);
+        if (ledIsOn) {
+        }
+
+        const v11 = graph.insertVertex(v1, null, '', 0, 0, 10, 16,
+          'shape=line;align=left;verticalAlign=middle;fontSize=10;routingCenterX=-0.5;' +
+          'spacingLeft=12;fontColor=' + fontColor + ';strokeColor=' + strokeColor);
+        v11.geometry.relative = true;
+        v11.geometry.offset = new mxPoint(-v11.geometry.width, 0);
+        const v12 = v11.clone();
+        v12.style = 'shape=line;align=right;verticalAlign=middle;fontSize=10;routingCenterX=0.5;' +
+          'spacingRight=12;fontColor=' + fontColor + ';strokeColor=' + strokeColor;
+        v12.value = '';
+        v12.geometry.offset = new mxPoint(60, 0);
+        v1.insert(v12);
+
+
+      } finally {
+
+        graph.getModel().endUpdate();
+      }
+    }
+
+    mxUtils.makeDraggable(imgRes, graph, dropResistor, dragElt, 0, 0, true, true);
+
+
+    // добавление переключателя на поле
+    const imgStick = document.getElementById('stick_im');
+    function dropStick(): void {
+      try {
+        graph.getModel().beginUpdate();
+        const v1 = graph.insertVertex(parent, null, 'switch', Math.random()*500, Math.random()*300, 60, 15,
+          'verticalLabelPosition=top;verticalAlign=bottom;shadow=1;fillColor=' + fillColor);
+        v1.setConnectable(false);
+        if (ledIsOn) {
+        }
+
+        const v11 = graph.insertVertex(v1, null, '', 0, 0, 2,15,
+          'align=left;verticalAlign=middle;fontSize=10;routingCenterX=-0.5;' +
+          'spacingLeft=12;fillColor=#000000');
+        v11.geometry.relative = true;
+        v11.geometry.offset = new mxPoint(10, 17);
+        const v12 = v11.clone();
+        v12.value = '';
+        v12.geometry.offset = new mxPoint(50, 17);
+        v1.insert(v12);
+
+        const v13 = v11.clone();
+        v13.value = '';
+        v13.geometry.offset = new mxPoint(30, 17);
+        v1.insert(v13);
+
+
+      } finally {
+
+        graph.getModel().endUpdate();
+      }
+    }
+
+    mxUtils.makeDraggable(imgStick, graph, dropStick, dragElt, 0, 0, true, true);
 
 
     // Undo, redo, delete
