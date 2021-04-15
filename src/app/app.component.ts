@@ -166,18 +166,22 @@ export class AppComponent {
           v1.style = 'shape=ellipse;verticalLabelPosition=top;verticalAlign=bottom;shadow=1;fillColor=red';
         }
 
-        const v11 = graph.insertVertex(v1, null, '', 0, 0, 10, 16,
-          'shape=line;align=left;verticalAlign=middle;fontSize=10;routingCenterX=-0.5;' +
+        const v11 = graph.insertVertex(v1, null, '+', 0, 0, 10, 16,
+          'shape=line;align=left;verticalAlign=top;fontSize=10;routingCenterX=-0.5;' +
           'spacingLeft=12;fontColor=' + fontColor + ';strokeColor=' + strokeColor);
         v11.geometry.relative = true;
         v11.geometry.offset = new mxPoint(-v11.geometry.width, 10);
         const v12 = v11.clone();
-        v12.style = 'shape=line;align=right;verticalAlign=middle;fontSize=10;routingCenterX=0.5;' +
+        v12.style = 'shape=line;align=right;verticalAlign=top;fontSize=10;routingCenterX=0.5;' +
           'spacingRight=12;fontColor=' + fontColor + ';strokeColor=' + strokeColor;
-        v12.value = '';
+        v12.value = '-';
         v12.geometry.offset = new mxPoint(35, 10);
         v1.insert(v12);
-
+        const v13 = graph.insertVertex(v1, null, null, 0, 0, 10, 10,
+          'shape=ellipse;verticalLabelPosition=top;verticalAlign=bottom;shadow=1;routingCenterX=0.5;spacingRight=12;fillColor=black');
+        v13.geometry.relative = true;
+        v13.geometry.offset = new mxPoint(13, 7);
+        v1.insert(v13);
 
       } finally {
 
@@ -283,6 +287,16 @@ export class AppComponent {
     {
       graph.removeCells();
     };
+
+    // const rotateBtn = document.getElementById('rotateBtn');
+    // rotateBtn.onclick = function()
+    // {
+    //   mxVertexHandler.prototype.rotateCell = function(	cell,
+    //                                                     angle,
+    //                                                     parent	)
+    //
+    // };
+
 
 
 
