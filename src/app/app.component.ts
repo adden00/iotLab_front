@@ -229,32 +229,42 @@ export class AppComponent {
    const imgBat = document.getElementById('bat_im');
    function dropBattery(): void {
      try {
-       graph.getModel().beginUpdate();
-       const v1 = graph.insertVertex(parent, null, '+',  0, 0, 30, 30,
-         'shape=line;verticalLabelPosition=top;verticalAlign=bottom;shadow=1;fillColor=' + fillColor);
-       v1.setConnectable(false);
+      graph.getModel().beginUpdate();
+      const v1 = graph.insertVertex(parent, null, '', Math.random()*500, Math.random()*500, 60, 0,
+        'shape=line;fontSize=10;verticalLabelPosition=top;verticalAlign=middle;fillColor=' + fillColor);
+      v1.setConnectable(false);
 
        if (ledIsOn) {
        }
 
-       const v11 = graph.insertVertex(v1, null, '',  0, 30, 30, 30,
-         'shape=line;align=left;verticalAlign=middle;fontSize=10;routingCenterX=-0.5;' +
-         'spacingLeft=12;fontColor=' + fontColor + ';strokeColor=' + strokeColor);
-       v11.geometry.relative = true;
-       v11.geometry.offset = new mxPoint(-v11.geometry.width, 0);
-       const v12 = v11.clone();
-       v12.style = 'shape=line;align=right;verticalAlign=middle;fontSize=10;routingCenterX=0.5;' +
-         'spacingRight=12;fontColor=' + fontColor + ';strokeColor=' + strokeColor;
-       v12.value = '';
-       v12.geometry.offset = new mxPoint(60, 0);
-       v1.insert(v12);
+      const v11 = graph.insertVertex(v1, null, '', 0, 0, 4,15,
+          'align=left;verticalAlign=middle;fontSize=10;routingCenterX=-0.5;' +
+          'spacingLeft=12;fillColor=#000000');
+      const v14 = graph.insertVertex(v1, null, '', 0, 0, 2,30,
+          'align=left;verticalAlign=middle;fontSize=10;routingCenterX=-0.5;' +
+          'spacingLeft=12;fillColor=#000000');
+        v11.geometry.relative = true;
+        v11.geometry.offset = new mxPoint(25, 8);
+       // const v12 = v11.clone();
+      //  v12.value = '';
+      //  v12.geometry.offset = new mxPoint(50, 17);
+       // v1.insert(v12);
+
+       // const v13 = v11.clone();
+      //  v13.value = '';
+       // v13.geometry.offset = new mxPoint(30, 17);
+       // v1.insert(v13);
+        v14.value = '';
+        v14.geometry.relative = true;
+        v14.geometry.offset = new mxPoint(35, 0);
+        v1.insert(v14);
 
 
-     } finally {
+      } finally {
 
-       graph.getModel().endUpdate();
-     }
-   }
+        graph.getModel().endUpdate();
+      }
+    }
 
    mxUtils.makeDraggable(imgBat, graph, dropBattery, dragElt, 0, 0, true, true);
     
