@@ -225,6 +225,40 @@ export class AppComponent {
     mxUtils.makeDraggable(imgRes, graph, dropResistor, dragElt, 0, 0, true, true);
 
 
+    // добавление батарейки на поле
+   const imgBat = document.getElementById('bat_im');
+   function dropBattery(): void {
+     try {
+       graph.getModel().beginUpdate();
+       const v1 = graph.insertVertex(parent, null, '+',  0, 0, 30, 30,
+         'shape=line;verticalLabelPosition=top;verticalAlign=bottom;shadow=1;fillColor=' + fillColor);
+       v1.setConnectable(false);
+
+       if (ledIsOn) {
+       }
+
+       const v11 = graph.insertVertex(v1, null, '',  0, 30, 30, 30,
+         'shape=line;align=left;verticalAlign=middle;fontSize=10;routingCenterX=-0.5;' +
+         'spacingLeft=12;fontColor=' + fontColor + ';strokeColor=' + strokeColor);
+       v11.geometry.relative = true;
+       v11.geometry.offset = new mxPoint(-v11.geometry.width, 0);
+       const v12 = v11.clone();
+       v12.style = 'shape=line;align=right;verticalAlign=middle;fontSize=10;routingCenterX=0.5;' +
+         'spacingRight=12;fontColor=' + fontColor + ';strokeColor=' + strokeColor;
+       v12.value = '';
+       v12.geometry.offset = new mxPoint(60, 0);
+       v1.insert(v12);
+
+
+     } finally {
+
+       graph.getModel().endUpdate();
+     }
+   }
+
+   mxUtils.makeDraggable(imgBat, graph, dropBattery, dragElt, 0, 0, true, true);
+    
+    
     // добавление переключателя на поле
     const imgStick = document.getElementById('stick_im');
     function dropStick(): void {
