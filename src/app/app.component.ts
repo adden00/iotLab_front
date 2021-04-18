@@ -181,6 +181,7 @@ export class AppComponent {
           'shape=ellipse;verticalLabelPosition=top;verticalAlign=bottom;shadow=1;routingCenterX=0.5;spacingRight=12;fillColor=black');
         v13.geometry.relative = true;
         v13.geometry.offset = new mxPoint(13, 7);
+        v13.setConnectable(false);
         v1.insert(v13);
 
       } finally {
