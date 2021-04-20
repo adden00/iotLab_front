@@ -201,8 +201,6 @@ export class AppComponent {
         const v1 = graph.insertVertex(parent, null, 'R', Math.random()*500, Math.random()*300, 60, 15,
           'verticalLabelPosition=top;verticalAlign=bottom;shadow=1;fillColor=' + fillColor);
         v1.setConnectable(false);
-        if (ledIsOn) {
-        }
 
         const v11 = graph.insertVertex(v1, null, '', 0, 0, 10, 16,
           'shape=line;align=left;verticalAlign=middle;fontSize=10;routingCenterX=-0.5;' +
@@ -227,38 +225,60 @@ export class AppComponent {
 
 
     // добавление батарейки на поле
-   const imgBat = document.getElementById('bat_im');
-   function dropBattery(): void {
+    const imgBat = document.getElementById('bat_im');
+    function dropBattery(): void {
      try {
       graph.getModel().beginUpdate();
-      const v1 = graph.insertVertex(parent, null, '', Math.random()*500, Math.random()*500, 60, 0,
-        'shape=line;fontSize=10;verticalLabelPosition=top;verticalAlign=middle;fillColor=' + fillColor);
+      const v0 = graph.insertVertex(parent, null, '', Math.random()*500, Math.random()*500, 60, 30,
+        'verticalLabelPosition=top;verticalAlign=bottom;fillColor=none;strokeColor=none');
+      // v0.visible = false;
+
+      v0.setConnectable(false);
+
+      const v1 = graph.insertVertex(v0, null, '', 0, 0, 3, 15,
+         'verticalLabelPosition=top;verticalAlign=bottom;fillColor=black;strokeColor=none');
+      v1.geometry.relative = true;
       v1.setConnectable(false);
-
-       if (ledIsOn) {
-       }
-
-      const v11 = graph.insertVertex(v1, null, '', 0, 0, 4,15,
-          'align=left;verticalAlign=middle;fontSize=10;routingCenterX=-0.5;' +
+      v1.geometry.offset = new mxPoint(20, 7);
+      v0.insert(v1);
+      const v11 = graph.insertVertex(v0, null, '', 0, 0, 10, 1,
+          'align=right;verticalAlign=middle;fontSize=10;routingCenterX=0.5;strokeColor=none;' +
           'spacingLeft=12;fillColor=#000000');
-      const v14 = graph.insertVertex(v1, null, '', 0, 0, 2,30,
-          'align=left;verticalAlign=middle;fontSize=10;routingCenterX=-0.5;' +
-          'spacingLeft=12;fillColor=#000000');
-        v11.geometry.relative = true;
-        v11.geometry.offset = new mxPoint(25, 8);
-       // const v12 = v11.clone();
-      //  v12.value = '';
-      //  v12.geometry.offset = new mxPoint(50, 17);
-       // v1.insert(v12);
+      v11.geometry.relative = true;
+      v11.geometry.offset = new mxPoint(37, 15);
+      v0.insert(v11);
 
-       // const v13 = v11.clone();
-      //  v13.value = '';
-       // v13.geometry.offset = new mxPoint(30, 17);
-       // v1.insert(v13);
-        v14.value = '';
-        v14.geometry.relative = true;
-        v14.geometry.offset = new mxPoint(35, 0);
-        v1.insert(v14);
+      const v111 = graph.insertVertex(v0, null, '+', 0, 0, 10, 3,
+         'align=left;verticalAlign=bottom;fontSize=20;routingCenterX=-0.5;;strokeColor=none' +
+         'spacingLeft=12;fillColor=#000000');
+      v111.geometry.relative = true;
+      v111.setConnectable(false);
+
+      v111.geometry.offset = new mxPoint(27, 14);
+      v0.insert(v11);
+
+      const v12 = v11.clone();
+      v12.style = 'verticalLabelPosition=top; align=left;verticalAlign=top;fontSize=20;routingCenterX=-0.5;strokeColor=none;' +
+        'spacingLeft=12;fillColor=#000000';
+      v12.geometry.relative = true;
+      v12.geometry.offset = new mxPoint(1, 15);
+      v0.insert(v12);
+
+      const v121 = v111.clone();
+      v121.value = '-';
+      v121.geometry.relative = true;
+      v121.geometry.offset = new mxPoint(11, 14);
+      v0.insert(v121);
+
+      const v14 = graph.insertVertex(v0, null, '', 0, 0, 2, 30,
+          'align=left;verticalAlign=middle;fontSize=10;routingCenterX=-0.5;strokeColor=none;' +
+          'spacingLeft=12;fillColor=#000000');
+
+      v14.value = '';
+      v14.geometry.relative = true;
+      v14.geometry.offset = new mxPoint(26, 0);
+      v14.setConnectable(false);
+      v0.insert(v14);
 
 
       } finally {
@@ -268,8 +288,8 @@ export class AppComponent {
     }
 
    mxUtils.makeDraggable(imgBat, graph, dropBattery, dragElt, 0, 0, true, true);
-    
-    
+
+
     // добавление переключателя на поле
     const imgStick = document.getElementById('stick_im');
     function dropStick(): void {
